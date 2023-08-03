@@ -1,11 +1,5 @@
 pipeline {
 	agent { label 'jdk8' }
-	options {
-		timeout(time: 1, unit: 'HOURS') retry(2)
-		 }
-	triggers {
-	cron('0 * * * *')
-}
 	stages {
 		stage('SourceCode')
 	{
